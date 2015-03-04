@@ -122,7 +122,6 @@ window.onload = function()
     var field = document.getElementById("field");
     var sendButton = document.getElementById("sendbtn");
     var conversation = document.getElementById("conversation");
-    var name = document.getElementById("name");
 
     // Detect keypresses for board shortcuts
     $(document).on("keydown", function (e) {
