@@ -11,12 +11,9 @@ html(lang="en")
     body
         br
         #nonarena.col-xs-3
-            #content.panel(style='border:1px solid #000;height:300px;overflow-y:scroll;')
+            #conversation
+                ul#content.list-unstyled
             #controls
-                | Username: 
-                input#name(autocomplete='off')
-                br
-                br
                 | Message: 
                 input#field.input(style='width:300px;', autocomplete='off', onkeydown="if(event.keyCode == 13) document.getElementById('sendbtn').click()")
                 br

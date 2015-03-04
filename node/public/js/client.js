@@ -1,10 +1,14 @@
 window.onload = function()
-{    
+{
+
     // data for socket.io
     var ipaddr = '192.168.1.5';
     var port = '3700';
     var messages = [];
     var socket = io.connect(ipaddr+':'+port);
+
+    var name = prompt("Enter your name");
+    socket.emit("joinserver", { username: name });
 
     var state = 0;  // to draw or not
     var BRUSHSZ = 2;
@@ -117,7 +121,7 @@ window.onload = function()
     // form data
     var field = document.getElementById("field");
     var sendButton = document.getElementById("sendbtn");
-    var content = document.getElementById("content");
+    var conversation = document.getElementById("conversation");
     var name = document.getElementById("name");
 
     // Detect keypresses for board shortcuts
@@ -197,10 +201,13 @@ window.onload = function()
     // What to do on receiving a message
     socket.on('message', function (data) {
         if(data.message) {
-            var html = '<b>' + (data.username ? data.username : 'Server') + ': </b>';
-            html += data.message + '<br>';
-            content.innerHTML += html;
-            content.scrollTop = content.scrollHeight;
+            if(!data.username)
+                data.username = "Anon";
+            if(data.username=='Server')
+                $("#content").append("<li style='font-size:14px;'><i><b><span class='text-success'>Server</span></b>: " + data.message + "</i></li>");
+            else
+                $("#content").append("<li><b><span class='text-danger'>" + data.username + "</span></b>: " + data.message + "</li>");
+            conversation.scrollTop = conversation.scrollHeight;
         }
         else {
             console.log("There is a problem (Empty message?):", data);
