@@ -1,0 +1,6 @@
+#canvas {
+    cursor: pointer;
+}
+#canvas:active {
+    cursor: crosshair;
+}

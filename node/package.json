@@ -1,0 +1,11 @@
+{
+    "name": "Nodeboard",
+    "version": "0.1.0",
+    "description": "Real time collaboration",
+    "dependencies": {
+        "socket.io": "latest",
+        "express": "latest",
+        "jade": "latest"
+    },
+    "author": "Purvi Tiwari and Aseem Raj"
+}
