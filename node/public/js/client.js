@@ -229,10 +229,6 @@ window.onload = function()
     sendButton.onclick = function() {
         var text = field.value;
         field.value = "";
-        if(name.value.split(' ').length>1)
-            alert("You must have a proper name.");
-        else
-            uname = name.value;
-            socket.emit('send', { message: text, username: uname });
+        socket.emit('send', { message: text, username: name });
     };
 }
