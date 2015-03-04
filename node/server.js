@@ -26,8 +26,7 @@ io.sockets.on('connection', function (socket) {
         io.sockets.emit('draw', data);
     });
     socket.on("disconnect", function(data) {
-            io.sockets.emit("message", { username: 'Server', message: data.username+' left!' });
-        }
+        io.sockets.emit("message", { username: 'Server', message: data.username+' left!' });
     });
 });
 
