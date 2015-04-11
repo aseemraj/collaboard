@@ -36,7 +36,7 @@ var io = require('socket.io').listen(app.listen(port));
 
 io.sockets.on('connection', function (socket) {
     socket.emit('idreport', { sockid: socket.id });
-    socket.emit('idreport', { sockid: socket.id });
+    socket.emit('message', { username: 'Server', message: 'Welcome to Collaboard!' });
     socket.on('joinserver', function(data) {
         socknames[socket.id] = escapeHtml(data.username);
         socket.broadcast.emit("message", { username: 'Server', message: escapeHtml(data.username) + ' appeared online!' });
