@@ -26,6 +26,19 @@
   border:1px solid #000;
   overflow-y:scroll;
 }
-#content li{padding:3px 0px 0px 8px;}
+#online {
+  font-size: 16px;
+  margin: 0px;
+  height: 250px;
+  width:100%;
+  border:1px solid #000;
+  overflow-y:scroll;
+}
+#content, #activeusers li{
+  padding:3px 0px 0px 8px;
+}
 #content li:nth-child(odd){background:#eeeeee;}
 #content li:nth-child(even){background:#dedede;}
+
+#activeusers li:nth-child(odd){background:#ddeedd;}
+#activeusers li:nth-child(even){background:#eeffee;}

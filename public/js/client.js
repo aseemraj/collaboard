@@ -22,7 +22,7 @@ window.onload = function()
     var canvas = $('#canvas').get(0).getContext("2d");
     var cantools = $('#tools').get(0).getContext('2d');
     var x = 0, y = 0;   // Mouse coordinates
-    var WID = 800, HEI =  550;
+    var WID = 750, HEI =  550;
 
     // display initial brush size
     $('#brushsz').innerHTML = 'BRUSHSZ';
@@ -41,87 +41,135 @@ window.onload = function()
     cantools.fillRect(0, 0, 20, 20);
     cantools.strokeRect(0, 0, 20, 20);
 
-    cantools.fillStyle = "#333333";
+    cantools.fillStyle = "#222222";
     cantools.fillRect(20, 0, 20, 20);
     cantools.strokeRect(20, 0, 20, 20);
 
-    cantools.fillStyle = "#777777";
+    cantools.fillStyle = "#444444";
     cantools.fillRect(40, 0, 20, 20);
     cantools.strokeRect(40, 0, 20, 20);
 
-    cantools.fillStyle = "#CCCCCC";
+    cantools.fillStyle = "#666666";
     cantools.fillRect(60, 0, 20, 20);
     cantools.strokeRect(60, 0, 20, 20);
 
-    cantools.fillStyle = "#FFFFFF";
+    cantools.fillStyle = "#888888";
     cantools.fillRect(80, 0, 20, 20);
     cantools.strokeRect(80, 0, 20, 20);
 
+    cantools.fillStyle = "#AAAAAA";
+    cantools.fillRect(100, 0, 20, 20);
+    cantools.strokeRect(100, 0, 20, 20);
+
+    cantools.fillStyle = "#CCCCCC";
+    cantools.fillRect(120, 0, 20, 20);
+    cantools.strokeRect(120, 0, 20, 20);
+
+    cantools.fillStyle = "#FFFFFF";
+    cantools.fillRect(140, 0, 20, 20);
+    cantools.strokeRect(140, 0, 20, 20);
+
     // red
-    cantools.fillStyle = "#280000";
+    cantools.fillStyle = "#220000";
     cantools.fillRect(0, 20, 20, 20);
     cantools.strokeRect(0, 20, 20, 20);
 
-    cantools.fillStyle = "#500000";
+    cantools.fillStyle = "#440000";
     cantools.fillRect(20, 20, 20, 20);
     cantools.strokeRect(20, 20, 20, 20);
 
-    cantools.fillStyle = "#800000";
+    cantools.fillStyle = "#660000";
     cantools.fillRect(40, 20, 20, 20);
     cantools.strokeRect(40, 20, 20, 20);
 
-    cantools.fillStyle = "#A80000";
+    cantools.fillStyle = "#880000";
     cantools.fillRect(60, 20, 20, 20);
     cantools.strokeRect(60, 20, 20, 20);
 
-    cantools.fillStyle = "#FF0000";
+    cantools.fillStyle = "#AF0000";
     cantools.fillRect(80, 20, 20, 20);
     cantools.strokeRect(80, 20, 20, 20);
 
+    cantools.fillStyle = "#C00000";
+    cantools.fillRect(100, 20, 20, 20);
+    cantools.strokeRect(100, 20, 20, 20);
+
+    cantools.fillStyle = "#DF0000";
+    cantools.fillRect(120, 20, 20, 20);
+    cantools.strokeRect(120, 20, 20, 20);
+
+    cantools.fillStyle = "#FF0000";
+    cantools.fillRect(140, 20, 20, 20);
+    cantools.strokeRect(140, 20, 20, 20);
+
     // green
-    cantools.fillStyle = "#003300";
+    cantools.fillStyle = "#001100";
     cantools.fillRect(0, 40, 20, 20);
     cantools.strokeRect(0, 40, 20, 20);
 
-    cantools.fillStyle = "#006600";
+    cantools.fillStyle = "#002200";
     cantools.fillRect(20, 40, 20, 20);
     cantools.strokeRect(20, 40, 20, 20);
 
-    cantools.fillStyle = "#009900";
+    cantools.fillStyle = "#004400";
     cantools.fillRect(40, 40, 20, 20);
     cantools.strokeRect(40, 40, 20, 20);
 
-    cantools.fillStyle = "#00CC00";
+    cantools.fillStyle = "#006600";
     cantools.fillRect(60, 40, 20, 20);
     cantools.strokeRect(60, 40, 20, 20);
 
-    cantools.fillStyle = "#00FF00";
+    cantools.fillStyle = "#008800";
     cantools.fillRect(80, 40, 20, 20);
     cantools.strokeRect(80, 40, 20, 20);
 
+    cantools.fillStyle = "#00AA00";
+    cantools.fillRect(100, 40, 20, 20);
+    cantools.strokeRect(100, 40, 20, 20);
+
+    cantools.fillStyle = "#00CC00";
+    cantools.fillRect(120, 40, 20, 20);
+    cantools.strokeRect(120, 40, 20, 20);
+
+    cantools.fillStyle = "#00FF00";
+    cantools.fillRect(140, 40, 20, 20);
+    cantools.strokeRect(140, 40, 20, 20);
+
 
     // blue
-    cantools.fillStyle = "#000033";
+    cantools.fillStyle = "#000011";
     cantools.fillRect(0, 60, 20, 20);
     cantools.strokeRect(0, 60, 20, 20);
 
-    cantools.fillStyle = "#000066";
+    cantools.fillStyle = "#000022";
     cantools.fillRect(20, 60, 20, 20);
     cantools.strokeRect(20, 60, 20, 20);
 
-    cantools.fillStyle = "#000099";
+    cantools.fillStyle = "#000044";
     cantools.fillRect(40, 60, 20, 20);
     cantools.strokeRect(40, 60, 20, 20);
 
-    cantools.fillStyle = "#0000CC";
+    cantools.fillStyle = "#000066";
     cantools.fillRect(60, 60, 20, 20);
     cantools.strokeRect(60, 60, 20, 20);
 
-    cantools.fillStyle = "#0000FF";
+    cantools.fillStyle = "#000088";
     cantools.fillRect(80, 60, 20, 20);
     cantools.strokeRect(80, 60, 20, 20);
 
-    var keymap = {16: false, 17: false, 187: false, 189: false};
+    cantools.fillStyle = "#0000AA";
+    cantools.fillRect(100, 60, 20, 20);
+    cantools.strokeRect(100, 60, 20, 20);
+
+    cantools.fillStyle = "#0000CC";
+    cantools.fillRect(120, 60, 20, 20);
+    cantools.strokeRect(120, 60, 20, 20);
+
+    cantools.fillStyle = "#0000FF";
+    cantools.fillRect(140, 60, 20, 20);
+    cantools.strokeRect(140, 60, 20, 20);
+
+    var keymap = {16: false, 17: false, 187: false, 189: false, 61: false, 173: false};
     // 16: shift
     // 17: ctrl
     // 187: =
@@ -136,9 +184,9 @@ window.onload = function()
     $(document).on("keydown", function (e) {
         if (e.keyCode in keymap) {
             keymap[e.keyCode] = true;
-            if(keymap[16] && keymap[187]) {
+            if(keymap[16] && (keymap[187] || keymap[61])) {
                 BRUSHSZ+=5;
-            }else if(keymap[16] && keymap[189]) {
+            }else if(keymap[16] && (keymap[189] || keymap[173])) {
                 BRUSHSZ-=5;
                 if(BRUSHSZ<1)BRUSHSZ=1;
             }
@@ -153,7 +201,11 @@ window.onload = function()
     // Detect mouse events
     $('#canvas').on("mousedown", function (e) {
         state = 1;
-        x = e.offsetX, y = e.offsetY;
+        if(e.offsetX==undefined)
+            x = e.pageX-$('#canvas').offset().left, y = e.pageY-$('#canvas').offset().top;
+        else
+            x = e.offsetX, y = e.offsetY;
+
         x-=5, y-=5;
         canvas.lineJoin = "round";
         canvas.beginPath();
@@ -173,7 +225,10 @@ window.onload = function()
         socket.emit('drawn', dataobj);
     }).on("mouseup", function (e) {
         state = 0;
-        x = e.offsetX, y = e.offsetY;
+        if(e.offsetX==undefined)
+            x = e.pageX-$('#canvas').offset().left, y = e.pageY-$('#canvas').offset().top;
+        else
+            x = e.offsetX, y = e.offsetY;
         canvas.closePath();
     }).on("mousemove", function (e) {
         // console.log(e);
@@ -184,10 +239,13 @@ window.onload = function()
         dataobj.col = COLOR;
         dataobj.bsz = BRUSHSZ;
         
-
+        canvas.lineJoin = "round";
         canvas.beginPath();
         canvas.moveTo(x, y);
-        x = e.offsetX, y = e.offsetY;
+        if(e.offsetX==undefined)
+            x = e.pageX-$('#canvas').offset().left, y = e.pageY-$('#canvas').offset().top;
+        else
+            x = e.offsetX, y = e.offsetY;
         x-=5, y-=5;
         canvas.lineTo(x, y);
         canvas.closePath();
@@ -211,7 +269,12 @@ window.onload = function()
 
     // drawing tools operated
     $('#tools').on('click', function(e) {
-        var p = cantools.getImageData(e.offsetX, e.offsetY, 1, 1).data;
+        var a, b;
+        if(e.offsetX==undefined)
+            a = e.pageX-$('#tools').offset().left, b = e.pageY-$('#tools').offset().top;
+        else
+            a = e.offsetX, b = e.offsetY;
+        var p = cantools.getImageData(a, b, 1, 1).data;
         COLOR = "#" + ("000000" + ((p[0] << 16) | (p[1] << 8) | p[2]).toString(16)).slice(-6);
     });
 
@@ -223,18 +286,52 @@ window.onload = function()
             if(!data.username)
                 data.username = "Anon";
             if(data.username=='Server')
-                $("#content").append("<li style='font-size:14px;'><i><b><span class='text-success'>Server</span></b>: " + data.message + "</i></li>");
+                $("#content").append("<li style='background:#fff;color:#666;'><i><b><span style='color:#000'>Server :</span></b> " + data.message + "</i></li>");
             else
-                $("#content").append("<li><b><span class='text-danger'>" + data.username + "</span></b>: " + data.message + "</li>");
+                $("#content").append("<li><b><span style=\"color:" + data.color + ";\">" + data.username + "</span></b>: " + data.message + "</li>");
             conversation.scrollTop = conversation.scrollHeight;
         }
         else {
             console.log("There is a problem (Empty message?):", data);
         }
     });
+    
+    // How to update the active users' list
+    socket.on('newcommer', function (data) {
+        var ulist = data.users;
+        if(ulist.length == 0) {
+            var elem = '<li id="none"><b>You are alone</b></li>';
+            $('#activeusers').append(elem);
+        }
+        else {
+            $('#none').remove();
+            for(var i=0; i<ulist.length; i++) {
+                var elem = '<li id="'+ulist[i].sock+'" style="color:'+ulist[i].color+'"><b>'+ulist[i].name+' </b><i class="fa fa-circle"></i></li>';
+                $('#activeusers').append(elem);
+            }
+        }
+    });
+    socket.on('joining', function (data) {
+        $('#none').remove();
+        var elem = '<li id="'+data.sock+'" style="color:'+data.color+'"><b>'+data.username+' </b><i class="fa fa-circle"></i></li>';
+        $('#activeusers').append(elem);
+    });
+    socket.on('leaving', function (data) {
+        $('#'+data.sock).remove();
+        if($('#activeusers li').length==0) {
+            var elem = '<li id="none"><b>You are alone</b></li>';
+            $('#activeusers').append(elem);
+        }
+    });
+    socket.on('namechanged', function (data) {
+        $('#'+data.sock).remove();
+        var elem = '<li id="'+data.sock+'" style="color:'+data.color+'"><b>'+data.username+' </b><i class="fa fa-circle"></i></li>';
+        $('#activeusers').append(elem);
+    });
  
     // when another client draws
     socket.on('draw', function (data) {
+        canvas.lineJoin = "round";
         canvas.beginPath();
         canvas.moveTo(data.fx, data.fy);
         canvas.lineTo(data.tx, data.ty);
